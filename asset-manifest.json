@@ -1,16 +1,35 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.f855e6bc.css",
-    "main.js": "/memory-game/static/js/main.1822da1c.js",
+    "main.css": "/memory-game/static/css/main.23cd4654.css",
+    "main.js": "/memory-game/static/js/main.278a4479.js",
     "static/js/453.58d809e6.chunk.js": "/memory-game/static/js/453.58d809e6.chunk.js",
-    "static/media/logo.svg": "/memory-game/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/cover.png": "/memory-game/static/media/cover.b6a1e1003313a3f917df.png",
+    "static/media/dagger-rose.png": "/memory-game/static/media/dagger-rose.16de921d41d34ca74e07.png",
+    "static/media/rolling-dices.png": "/memory-game/static/media/rolling-dices.41241ae9d9b0f6cfeff4.png",
+    "static/media/snake-spiral.png": "/memory-game/static/media/snake-spiral.8b6da9f56d31f253eb0b.png",
+    "static/media/shield.png": "/memory-game/static/media/shield.7227d57bd892233740fa.png",
+    "static/media/scroll.png": "/memory-game/static/media/scroll.4ff5585408e47613d238.png",
+    "static/media/robot-golem.png": "/memory-game/static/media/robot-golem.247dfa1355f8a5c54004.png",
+    "static/media/haunting.png": "/memory-game/static/media/haunting.8e12937136fa3029eed2.png",
+    "static/media/potion.png": "/memory-game/static/media/potion.86ce548cee6db18099f1.png",
+    "static/media/castle.png": "/memory-game/static/media/castle.f379165238ca8de6d4bf.png",
+    "static/media/shambling-zombie.png": "/memory-game/static/media/shambling-zombie.3f2be6f772bfa44baf22.png",
+    "static/media/aero-bike.png": "/memory-game/static/media/aero-bike.9311ee59ff0b4e97e27c.png",
+    "static/media/wolf-head.png": "/memory-game/static/media/wolf-head.c8c2fc6ba445cfb33e33.png",
+    "static/media/robe.png": "/memory-game/static/media/robe.66ee9da3c5cbc329fbd7.png",
+    "static/media/helmet.png": "/memory-game/static/media/helmet.dafdeb0a1178011e04d2.png",
+    "static/media/ring.png": "/memory-game/static/media/ring.47f282a6929ffcfe32bd.png",
+    "static/media/bird-scepter.png": "/memory-game/static/media/bird-scepter.0a4949f541fc995af490.png",
+    "static/media/fishing.png": "/memory-game/static/media/fishing.f7bcc4546651cda9d3e1.png",
+    "static/media/sword.png": "/memory-game/static/media/sword.884008f4e593df1a52a2.png",
+    "static/media/helicopter.png": "/memory-game/static/media/helicopter.c90a61008a0519cb0273.png",
     "index.html": "/memory-game/index.html",
-    "main.f855e6bc.css.map": "/memory-game/static/css/main.f855e6bc.css.map",
-    "main.1822da1c.js.map": "/memory-game/static/js/main.1822da1c.js.map",
+    "main.23cd4654.css.map": "/memory-game/static/css/main.23cd4654.css.map",
+    "main.278a4479.js.map": "/memory-game/static/js/main.278a4479.js.map",
     "453.58d809e6.chunk.js.map": "/memory-game/static/js/453.58d809e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.1822da1c.js"
+    "static/css/main.23cd4654.css",
+    "static/js/main.278a4479.js"
   ]
 }
