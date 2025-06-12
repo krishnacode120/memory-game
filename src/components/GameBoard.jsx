@@ -9,15 +9,8 @@ const allCardImages = [
   "shield", "snake-spiral", "sword", "wolf-head"
 ];
 
-const getRandomCardSet = () => {
-  const shuffled = [...allCardImages].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, 8).map((name) => ({
-    src: `/img/${name}.png`,
-    matched: false,
-  }));
-};
-
 const GameBoard = () => {
+  const [gridSize, setGridSize] = useState(4);
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
@@ -27,7 +20,19 @@ const GameBoard = () => {
   const [elapsed, setElapsed] = useState(0);
   const [gameWon, setGameWon] = useState(false);
 
-  // Timer
+  const getRandomCardSet = () => {
+    const pairCount = (gridSize * gridSize) / 2;
+    const shuffled = [...allCardImages].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, pairCount).map((name) => ({
+      src: process.env.PUBLIC_URL + `/img/${name}.png`,
+      matched: false,
+    }));
+  };
+
+  useEffect(() => {
+    shuffleCards();
+  }, [gridSize]);
+
   useEffect(() => {
     let timer;
     if (startTime && !gameWon) {
@@ -63,14 +68,14 @@ const GameBoard = () => {
     if (choiceOne && choiceTwo) {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
-        setCards((prevCards) =>
-          prevCards.map((card) =>
+        setCards((prev) =>
+          prev.map((card) =>
             card.src === choiceOne.src ? { ...card, matched: true } : card
           )
         );
         resetTurn();
       } else {
-        setTimeout(() => resetTurn(), 1000);
+        setTimeout(() => resetTurn(), 800);
       }
     }
   }, [choiceOne, choiceTwo]);
@@ -88,28 +93,32 @@ const GameBoard = () => {
     setDisabled(false);
   };
 
-  useEffect(() => {
-    shuffleCards();
-  }, []);
-
   return (
     <div>
+      <Select onChange={(e) => setGridSize(Number(e.target.value))} value={gridSize}>
+        <option value={4}>🟢 Easy (4x4)</option>
+        <option value={6}>🟡 Medium (6x6)</option>
+      </Select>
+
       <Button onClick={shuffleCards}>🔁 Restart</Button>
       <Stats>
         <span>Turns: {turns}</span>
         <span>Time: {elapsed}s</span>
       </Stats>
-      <Board>
+
+      <Board columns={gridSize}>
         {cards.map((card) => (
           <Card
             key={card.id}
             card={card}
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
+            matched={card.matched}
             disabled={disabled}
           />
         ))}
       </Board>
+
       {gameWon && <WinText>🎉 You Won in {turns} turns & {elapsed}s!</WinText>}
     </div>
   );
@@ -117,9 +126,11 @@ const GameBoard = () => {
 
 export default GameBoard;
 
+// Styled Components
+
 const Board = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(${(props) => props.columns}, 100px);
   gap: 15px;
   justify-content: center;
   margin-top: 20px;
@@ -153,4 +164,11 @@ const WinText = styled.div`
   font-size: 1.4rem;
   color: #39ff14;
   text-shadow: 0 0 5px #00ff95, 0 0 10px #00ff95;
+`;
+
+const Select = styled.select`
+  margin-bottom: 1rem;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
 `;
