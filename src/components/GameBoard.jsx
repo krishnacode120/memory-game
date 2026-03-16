@@ -31,7 +31,7 @@ const GameBoard = () => {
 
   useEffect(() => {
     shuffleCards();
-  }, [gridSize]);
+  }, [shuffleCards,gridSize]);
 
   useEffect(() => {
     let timer;
