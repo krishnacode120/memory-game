@@ -1,7 +1,6 @@
 {
   "name": "memory-game",
   "version": "0.1.0",
-  "homepage": "https://krishnacode120.github.io/memory-game",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
