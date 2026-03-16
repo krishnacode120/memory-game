@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# 🧠 Memory Card Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive **Memory Matching Card Game** built using **React**. Players flip cards to find matching pairs while tracking their moves and time. The game includes selectable difficulty levels, a restart feature, and a clean, responsive UI styled with **styled-components**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎮 Features
 
-### `npm start`
+* 🃏 Interactive card matching gameplay
+* 🔢 Difficulty modes: **Easy (4×4)** and **Medium (6×6)**
+* ⏱️ Real-time **game timer**
+* 🔁 **Restart / reshuffle** functionality
+* 📊 **Move counter** to track turns
+* 🎉 **Win detection message** when all pairs are matched
+* 🎨 Styled using **styled-components**
+* ⚛️ Built using modern **React Hooks**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+* **React**
+* **JavaScript (ES6+)**
+* **Styled Components**
+* **React Hooks (useState, useEffect, useCallback)**
+* **CSS Grid Layout**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+memory-game/
+│
+├── public/
+│   └── img/              # Card images used in the game
+│
+├── src/
+│   ├── components/
+│   │   ├── Card.jsx      # Individual card component
+│   │   └── GameBoard.jsx # Game logic and board layout
+│   │
+│   ├── App.js            # Main application component
+│   └── index.js          # React entry point
+│
+├── package.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Installation
 
-### `npm run eject`
+### 1️⃣ Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/krishnacode120/memory-game.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2️⃣ Navigate to the project folder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd memory-game
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3️⃣ Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4️⃣ Run the development server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+The application will start at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🧩 How to Play
 
-### Making a Progressive Web App
+1. Select a **difficulty level** (4×4 or 6×6).
+2. Click cards to **flip them over**.
+3. Match two cards with the **same image**.
+4. If they match, they stay revealed.
+5. If they do not match, they flip back.
+6. Match all pairs to **win the game**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Try to finish with **minimum turns and shortest time**.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌐 Live Demo
 
-### Deployment
+Play the deployed version here:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+https://memory-game-brown-seven.vercel.app
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+**Krishna Moorthy**
+
+GitHub:
+https://github.com/krishnacode120
